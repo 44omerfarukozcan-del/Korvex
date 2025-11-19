@@ -3,5 +3,5 @@
 
   <path d="M110 60 L190 150 L110 240" stroke="#000000" stroke-width="18" stroke-linecap="round"/>
 
-  <path d="M190 60 L110 150 L190 240" stroke="#000000" stroke-width="18" stroke-linecap="round"/>
+  <path d="M190 60 L110 150 L190 240" stroke="#f5f2f2ff" stroke-width="18" stroke-linecap="round"/>
 </svg>
