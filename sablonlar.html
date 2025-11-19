@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<title>KORVEX — Hazır Şablonlar</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;800;900&display=swap" rel="stylesheet">
+
+<style>
+body{
+  margin:0;
+  padding:0;
+  background:#0b0d13;
+  color:white;
+  font-family:'Inter',sans-serif;
+}
+
+/* NAVBAR */
+.navbar{
+  width:100%;
+  padding:22px 50px;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  background:rgba(15,17,26,0.8);
+  border-bottom:1px solid rgba(255,255,255,.08);
+  backdrop-filter:blur(12px);
+}
+.nav-left{display:flex;align-items:center;gap:14px;}
+.logo-img{width:55px;}
+.nav-name{font-size:28px;font-weight:900;}
+.nav-links a{
+  margin-left:35px;
+  color:white;
+  opacity:.85;
+  text-decoration:none;
+  transition:.25s;
+}
+.nav-links a:hover{opacity:1;color:#3bafff;}
+
+/* HEADER */
+.header{
+  text-align:center;
+  margin-top:60px;
+}
+.header h1{
+  font-size:42px;
+  font-weight:900;
+}
+.header p{
+  opacity:.75;
+  margin-top:10px;
+  font-size:17px;
+}
+
+/* GRID */
+.grid{
+  width:90%;
+  margin:50px auto 100px;
+  display:grid;
+  grid-template-columns:repeat(auto-fit, minmax(320px,1fr));
+  gap:30px;
+}
+
+.card{
+  background:#12141c;
+  border:1px solid #1c1f29;
+  border-radius:15px;
+  padding:24px;
+  transition:.25s;
+}
+.card:hover{
+  transform:translateY(-6px);
+  border-color:#3bafff;
+  box-shadow:0 0 25px rgba(59,175,255,.15);
+}
+.card img{
+  width:100%;
+  height:190px;
+  object-fit:cover;
+  border-radius:12px;
+  margin-bottom:15px;
+}
+.card h3{
+  margin:10px 0;
+  font-size:22px;
+  font-weight:700;
+}
+.card p{
+  opacity:.75;
+  font-size:15px;
+  line-height:1.6;
+}
+
+/* BUTTONS */
+.btn{
+  display:inline-block;
+  margin-top:14px;
+  padding:10px 20px;
+  background:#3bafff;
+  color:#0b0d13;
+  border-radius:10px;
+  font-weight:700;
+  text-decoration:none;
+  transition:.25s;
+}
+.btn:hover{transform:translateY(-3px);}
+.btn2{
+  background:#8cffd6;
+  color:#0b0d13;
+  margin-left:10px;
+}
+
+/* FOOTER */
+footer{
+  margin-top:40px;
+  padding:30px 0;
+  background:#10121a;
+  text-align:center;
+  border-top:1px solid rgba(255,255,255,.06);
+}
+footer img{width:28px;margin-top:10px;opacity:.85;}
+footer img:hover{opacity:1;}
+</style>
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<div class="navbar">
+  <div class="nav-left">
+    <img src="logo.svg" class="logo-img">
+    <div class="nav-name">KORVEX</div>
+  </div>
+
+  <div class="nav-links">
+    <a href="index.html">Ana Sayfa</a>
+    <a href="yazilim.html">Yazılım</a>
+    <a href="ai.html">AI Araçları</a>
+    <a href="sablonlar.html">Şablonlar</a>
+    <a href="blog.html">Blog</a>
+    <a href="iletisim.html">İletişim</a>
+    <a href="ayarlar.html">Ayarlar</a>
+  </div>
+</div>
+
+<!-- HEADER -->
+<div class="header">
+  <h1>Hazır Şablonlar</h1>
+  <p>Modern web sitesi şablonları — Portfolio, Business, Blog.</p>
+</div>
+
+<!-- GRID -->
+<div class="grid">
+
+  <!-- PORTFOLIO -->
+  <div class="card">
+    <img src="https://images.pexels.com/photos/1181671/pexels-photo-1181671.jpeg?auto=compress&cs=tinysrgb&w=800">
+    <h3>Portfolio Template</h3>
+    <p>Kişisel CV ve portfolio sitesi. Hero, projeler, skills, iletişim bölümü.</p>
+
+    <!-- BUTONLAR (ÇALIŞIR) -->
+    <a href="portfolio-demo.html" class="btn">Önizle</a>
+    <a href="portfolio-demo.html" class="btn btn2" download>İndir</a>
+  </div>
+
+  <!-- BUSINESS -->
+  <div class="card">
+    <img src="https://images.pexels.com/photos/3183150/pexels-photo-3183150.jpeg?auto=compress&cs=tinysrgb&w=800">
+    <h3>Business Template</h3>
+    <p>Kurumsal şirket/ajans için şık tasarım. Hizmetler, ekip, fiyatlandırma.</p>
+
+    <!-- BUTONLAR (ÇALIŞIR) -->
+    <a href="business-demo.html" class="btn">Önizle</a>
+    <a href="business-demo.html" class="btn btn2" download>İndir</a>
+  </div>
+
+  <!-- BLOG -->
+  <div class="card">
+    <img src="https://images.pexels.com/photos/4050303/pexels-photo-4050303.jpeg?auto=compress&cs=tinysrgb&w=800">
+    <h3>Blog Template</h3>
+    <p>Blog grid + kategori sistemi + detay sayfası + yorum formu.</p>
+
+    <!-- BUTONLAR (ÇALIŞIR) -->
+    <a href="blog-demo.html" class="btn">Önizle</a>
+    <a href="blog-demo.html" class="btn btn2" download>İndir</a>
+  </div>
+
+</div>
+
+<footer>
+  © 2025 KORVEX — ÖMER FARUK ÖZCAN Tüm Hakları Saklıdır  
+</footer>
+
+</body>
+</html>

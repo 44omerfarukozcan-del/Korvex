@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Business Landing Page — Önizleme | KORVEX</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;900&display=swap" rel="stylesheet">
+
+<style>
+body{margin:0;padding:0;font-family:'Inter',sans-serif;background:#0b0d13;color:white;overflow-x:hidden;}
+.glow{position:absolute;width:450px;height:450px;background:radial-gradient(circle,rgba(59,175,255,.4),transparent);filter:blur(60px);}
+.glow:nth-child(1){top:-120px;left:-120px;}
+.glow:nth-child(2){bottom:-120px;right:-120px;}
+
+.navbar{width:100%;padding:22px 50px;display:flex;align-items:center;justify-content:space-between;background:rgba(15,17,26,.8);border-bottom:1px solid rgba(255,255,255,.1);backdrop-filter:blur(10px);}
+.nav-left{display:flex;align-items:center;gap:14px;}
+.logo-img{width:55px;}
+.nav-name{font-size:28px;font-weight:900;}
+.nav-links a{margin-left:35px;color:white;opacity:.8;text-decoration:none;transition:.25s;}
+.nav-links a:hover{color:#3bafff;opacity:1;}
+
+.hero{
+    text-align:center;
+    padding:150px 20px 140px;
+}
+.hero h1{
+    font-size:60px;
+    font-weight:900;
+    background:linear-gradient(90deg,#ffffff,#a9d1ff);
+    -webkit-background-clip:text;color:transparent;
+}
+.hero p{
+    opacity:.75;
+    font-size:22px;
+    margin-top:12px;
+}
+.btn-main{
+    display:inline-block;
+    margin-top:35px;
+    padding:16px 32px;
+    background:#3bafff;
+    color:#0b0d13;
+    border-radius:12px;
+    font-size:18px;
+    font-weight:700;
+    text-decoration:none;
+    transition:.25s;
+}
+.btn-main:hover{transform:translateY(-4px);}
+
+/* SECTIONS */
+.section{
+    width:85%;
+    margin:80px auto;
+    background:#12141c;
+    padding:40px;
+    border-radius:16px;
+    border:1px solid #1c1f29;
+}
+.section h2{
+    font-size:32px;
+    font-weight:800;
+    margin-bottom:15px;
+}
+.section p{
+    opacity:.75;
+    line-height:1.7;
+}
+
+/* GRID */
+.grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+    gap:25px;
+    margin-top:25px;
+}
+.card{
+    background:#161822;
+    padding:25px;
+    border-radius:14px;
+    border:1px solid #1c1f29;
+    transition:.25s;
+}
+.card:hover{
+    border-color:#3bafff;
+    transform:translateY(-5px);
+}
+.card h3{
+    margin-bottom:10px;
+    font-size:20px;
+    font-weight:700;
+}
+.card p{
+    opacity:.7;
+    line-height:1.6;
+}
+
+/* TEAM */
+.team-img{
+    width:100%;
+    border-radius:14px;
+    margin-bottom:12px;
+}
+
+/* FOOTER */
+footer{
+    margin-top:90px;
+    padding:35px;
+    text-align:center;
+    background:#10121a;
+    border-top:1px solid rgba(255,255,255,.06);
+}
+footer img{
+    width:28px;
+    opacity:.85;
+}
+footer img:hover{opacity:1;}
+</style>
+</head>
+
+<body>
+
+<div class="glow"></div>
+<div class="glow"></div>
+
+<!-- NAVBAR -->
+<div class="navbar">
+  <div class="nav-left">
+    <img src="logo.svg" class="logo-img">
+    <div class="nav-name">KORVEX</div>
+  </div>
+
+  <div class="nav-links">
+    <a href="sablonlar.html">← Şablonlara Dön</a>
+  </div>
+</div>
+
+<!-- HERO -->
+<div class="hero">
+  <h1>Business Landing Page</h1>
+  <p>Modern şirketler için premium tanıtım sayfası.</p>
+  <a href="#" class="btn-main">Demo Butonu</a>
+</div>
+
+<!-- ABOUT -->
+<div class="section">
+  <h2>Şablon Hakkında</h2>
+  <p>
+    Kurumsal firmalar için hazırlanan bu landing page; hero alanı, hizmet kartları,
+    referans bölümü ve ekip tanıtımı ile profesyonel bir sunum elde etmenizi sağlar.
+  </p>
+
+  <div class="grid">
+
+    <div class="card">
+      <h3>⚡ Hızlı & Şık</h3>
+      <p>Minimal tasarım + yüksek performans odaklı.</p>
+    </div>
+
+    <div class="card">
+      <h3>🧩 Kurumsal Yapı</h3>
+      <p>Hizmet, ekip, referanslar ve iletişim alanları.</p>
+    </div>
+
+    <div class="card">
+      <h3>📱 Responsive</h3>
+      <p>Telefon, tablet ve tüm ekranlarda tam uyumlu.</p>
+    </div>
+
+  </div>
+</div>
+
+<!-- TEAM SECTION -->
+<div class="section">
+  <h2>Ekibimiz</h2>
+
+  <div class="grid">
+    <div>
+      <img src="https://images.pexels.com/photos/774909/pexels-photo-774909.jpeg?auto=compress&cs=tinysrgb&w=800" class="team-img">
+      <h3>Ahmet Yılmaz</h3>
+      <p style="opacity:.6;">Proje Yöneticisi</p>
+    </div>
+
+    <div>
+      <img src="https://images.pexels.com/photos/3184613/pexels-photo-3184613.jpeg?auto=compress&cs=tinysrgb&w=800" class="team-img">
+      <h3>Melis Aksoy</h3>
+      <p style="opacity:.6;">Tasarım Uzmanı</p>
+    </div>
+
+    <div>
+      <img src="https://images.pexels.com/photos/1181686/pexels-photo-1181686.jpeg?auto=compress&cs=tinysrgb&w=800" class="team-img">
+      <h3>Koray Demir</h3>
+      <p style="opacity:.6;">Yazılım Geliştirici</p>
+    </div>
+  </div>
+</div>
+
+<!-- FOOTER -->
+<footer>
+© 2025 KORVEX — ÖMER FARUK ÖZCAN Tüm Hakları Saklıdır<br>
+<a href="https://instagram.com/omerozcn00" target="_blank">
+<img src="instagram.svg">
+</a>
+</footer>
+
+</body>
+</html>

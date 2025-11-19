@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>KORVEX — Giriş Yap</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800;900&display=swap" rel="stylesheet">
+
+<style>
+*{margin:0;padding:0;box-sizing:border-box;}
+body{
+  background:#0b0d13;
+  color:#fff;
+  font-family:"Inter", sans-serif;
+  overflow-x:hidden;
+}
+
+.glow{
+  position:absolute;
+  width:420px;height:420px;
+  background:radial-gradient(circle,rgba(59,175,255,.35),rgba(59,175,255,0));
+  filter:blur(60px);
+}
+.glow:nth-child(1){top:-120px;left:-120px;}
+.glow:nth-child(2){bottom:-120px;right:-120px;}
+
+.container{
+  width:370px;
+  margin:140px auto;
+  padding:40px;
+  border-radius:20px;
+  backdrop-filter:blur(20px);
+  background:rgba(255,255,255,.05);
+  border:1px solid rgba(255,255,255,.12);
+  box-shadow:0 0 40px rgba(59,175,255,.15);
+  text-align:center;
+}
+
+h1{
+  font-size:32px;
+  font-weight:800;
+  margin-bottom:25px;
+}
+
+input{
+  width:100%;
+  padding:15px;
+  margin:12px 0;
+  background:#12141c;
+  border-radius:12px;
+  border:1px solid #1c1f29;
+  color:white;
+  font-size:16px;
+}
+
+.btn{
+  margin-top:20px;
+  padding:14px;
+  width:100%;
+  background:#3bafff;
+  color:#0b0d13;
+  border-radius:12px;
+  font-size:17px;
+  font-weight:700;
+  cursor:pointer;
+  transition:.25s;
+}
+.btn:hover{transform:translateY(-4px);}
+
+a{color:#3bafff;text-decoration:none;opacity:.8;}
+a:hover{opacity:1;}
+/* MOBILE MENU */
+.hamburger{
+    display:none;
+    width:34px;
+    cursor:pointer;
+}
+
+.hamburger div{
+    height:4px;
+    background:white;
+    margin:6px 0;
+    border-radius:4px;
+    transition:.3s;
+}
+
+/* MOBILE NAV PANEL */
+.mobile-menu{
+    position:fixed;
+    top:0;
+    right:-100%;
+    width:75%;
+    height:100vh;
+    background:#12141c;
+    padding:40px 30px;
+    z-index:999;
+    transition:.4s;
+    display:flex;
+    flex-direction:column;
+}
+
+.mobile-menu a{
+    color:white;
+    text-decoration:none;
+    font-size:20px;
+    margin:18px 0;
+    opacity:.85;
+    transition:.25s;
+}
+.mobile-menu a:hover{
+    color:#3bafff;
+    opacity:1;
+}
+
+/* DARK OVERLAY */
+.overlay{
+    position:fixed;
+    top:0;left:0;
+    width:100%;height:100%;
+    background:rgba(0,0,0,.55);
+    backdrop-filter:blur(6px);
+    z-index:998;
+    display:none;
+}
+
+/* RESPONSIVE */
+@media(max-width:900px){
+    .nav-links{
+        display:none;
+    }
+    .hamburger{
+        display:block;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<div class="glow"></div>
+<div class="glow"></div>
+
+<div class="container">
+  <h1>Giriş Yap</h1>
+
+  <input type="text" placeholder="Kullanıcı Adı">
+  <input type="password" placeholder="Şifre">
+
+  <button class="btn">Giriş Yap</button>
+
+  <p style="margin-top:20px;font-size:14px;">Hesabın yok mu?  
+  <a href="register.html">Kayıt Ol</a></p>
+</div>
+
+</body>
+</html>

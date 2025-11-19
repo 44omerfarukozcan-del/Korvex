@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<title>KORVEX — İletişim</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;800;900&display=swap" rel="stylesheet">
+
+<style>
+body{
+  margin:0;
+  padding:0;
+  background:#0b0d13;
+  color:white;
+  font-family:'Inter',sans-serif;
+}
+
+/* NAVBAR */
+.navbar{
+  width:100%;
+  padding:22px 50px;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  background:rgba(15,17,26,0.8);
+  border-bottom:1px solid rgba(255,255,255,.08);
+  backdrop-filter:blur(12px);
+}
+.nav-left{display:flex;align-items:center;gap:14px;}
+.logo-img{width:55px;}
+.nav-name{font-size:28px;font-weight:900;}
+.nav-links a{
+  margin-left:35px;
+  color:white;
+  opacity:.85;
+  text-decoration:none;
+  transition:.25s;
+}
+.nav-links a:hover{opacity:1;color:#3bafff;}
+
+/* HEADER */
+.header{
+  text-align:center;
+  margin-top:60px;
+}
+.header h1{
+  font-size:42px;
+  font-weight:900;
+}
+.header p{
+  opacity:.75;
+  margin-top:10px;
+  font-size:17px;
+}
+
+/* GRID */
+.grid{
+  width:90%;
+  margin:50px auto 100px;
+  display:grid;
+  grid-template-columns:repeat(auto-fit, minmax(320px,1fr));
+  gap:28px;
+}
+
+.card{
+  background:#12141c;
+  padding:26px;
+  border-radius:15px;
+  border:1px solid #1c1f29;
+}
+.card:hover{
+  transform:translateY(-4px);
+  transition:.25s;
+  border-color:#3bafff;
+}
+.card h3{
+  font-size:22px;
+  margin-bottom:10px;
+}
+.card p{
+  opacity:.75;
+  font-size:15px;
+  line-height:1.6;
+}
+
+/* FORM */
+form{
+  display:flex;
+  flex-direction:column;
+  gap:14px;
+  margin-top:15px;
+}
+input, textarea{
+  width:100%;
+  padding:12px;
+  background:#0f111a;
+  border-radius:10px;
+  border:1px solid #1c1f29;
+  color:white;
+  font-size:15px;
+  outline:none;
+}
+input:focus, textarea:focus{
+  border-color:#3bafff;
+}
+textarea{
+  height:120px;
+  resize:none;
+}
+.btn{
+  background:#3bafff;
+  color:#0b0d13;
+  padding:12px;
+  border-radius:10px;
+  font-weight:700;
+  cursor:pointer;
+  border:none;
+  transition:.25s;
+}
+.btn:hover{
+  transform:translateY(-3px);
+}
+
+/* FOOTER */
+footer{
+  margin-top:40px;
+  padding:30px 0;
+  background:#10121a;
+  text-align:center;
+  border-top:1px solid rgba(255,255,255,.06);
+}
+footer img{width:28px;margin-top:10px;opacity:.85;}
+footer img:hover{opacity:1;}
+</style>
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<div class="navbar">
+  <div class="nav-left">
+    <img src="logo.svg" class="logo-img">
+    <div class="nav-name">KORVEX</div>
+  </div>
+
+  <div class="nav-links">
+    <a href="index.html">Ana Sayfa</a>
+    <a href="yazilim.html">Yazılım</a>
+    <a href="ai.html">AI Araçları</a>
+    <a href="sablonlar.html">Şablonlar</a>
+    <a href="blog.html">Blog</a>
+    <a href="iletisim.html">İletişim</a>
+    <a href="ayarlar.html">Ayarlar</a>
+  </div>
+</div>
+
+<!-- HEADER -->
+<div class="header">
+  <h1>İletişime Geç</h1>
+  <p>Her türlü soru, öneri veya iş birliği için bizimle iletişime geç.</p>
+</div>
+
+<!-- GRID -->
+<div class="grid">
+
+  <!-- INFO CARD -->
+  <div class="card">
+    <h3>İletişim Bilgileri</h3>
+    <p><strong>E-posta:</strong><br>omerrfarukozcann@gmail.com</p>
+    <p><strong>Instagram:</strong><br>@omerozcn00</p>
+  </div>
+
+  <!-- FORM CARD -->
+  <div class="card">
+    <h3>Mesaj Gönder</h3>
+    <form action="mailto:omerrfarukozcann@gmail.com" method="POST" enctype="text/plain">
+      <input type="text" name="isim" placeholder="Adınız">
+      <input type="email" name="mail" placeholder="E-posta">
+      <textarea name="mesaj" placeholder="Mesajınız"></textarea>
+      <button class="btn" type="submit">Gönder</button>
+    </form>
+  </div>
+
+</div>
+
+<!-- FOOTER -->
+<footer>
+  © 2025 KORVEX — ÖMER FARUK ÖZCAN Tüm Hakları Saklıdır  
+  <br>
+  <a href="https://instagram.com/omerozcn00" target="_blank">
+    <img src="instagram.svg">
+  </a>
+</footer>
+
+</body>
+</html>

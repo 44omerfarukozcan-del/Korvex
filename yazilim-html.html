@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<title>HTML Eğitimi — KORVEX</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;800&display=swap" rel="stylesheet">
+
+<style>
+body{
+  margin:0;
+  padding:0;
+  background:#0b0d13;
+  color:#fff;
+  font-family:'Inter',sans-serif;
+}
+
+/* NAVBAR */
+.navbar{
+  width:100%;
+  padding:22px 50px;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  background:rgba(15,17,26,0.8);
+  border-bottom:1px solid rgba(255,255,255,.08);
+  backdrop-filter:blur(12px);
+}
+.nav-left{display:flex;align-items:center;gap:14px;}
+.logo-img{width:55px;}
+.nav-name{font-size:28px;font-weight:800;}
+.nav-links a{
+  margin-left:35px;
+  color:white;
+  opacity:.85;
+  text-decoration:none;
+  transition:.25s;
+}
+.nav-links a:hover{opacity:1;color:#3bafff;}
+
+.container{
+  width:90%;
+  max-width:900px;
+  margin:60px auto 100px;
+}
+
+h1{
+  font-size:40px;
+  font-weight:800;
+  margin-bottom:10px;
+}
+p{
+  opacity:.85;
+  line-height:1.7;
+  margin-bottom:14px;
+  font-size:15px;
+}
+
+.section{
+  margin-top:50px;
+  background:#12141c;
+  border:1px solid #1c1f29;
+  border-radius:14px;
+  padding:24px;
+}
+
+.section h2{
+  font-size:26px;
+  font-weight:700;
+  margin-bottom:12px;
+}
+
+.code{
+  background:#0f111a;
+  padding:18px;
+  border-radius:10px;
+  font-family:monospace;
+  font-size:14px;
+  white-space:pre-wrap;
+  border:1px solid #1c1f29;
+  margin-top:10px;
+  color:#9ed0ff;
+}
+
+footer{
+  padding:30px;
+  text-align:center;
+  background:#10121a;
+  border-top:1px solid rgba(255,255,255,.06);
+}
+footer img{width:28px;margin-top:10px;opacity:.85;}
+footer img:hover{opacity:1;}
+</style>
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<div class="navbar">
+  <div class="nav-left">
+    <img src="logo.svg" class="logo-img">
+    <div class="nav-name">KORVEX</div>
+  </div>
+  <div class="nav-links">
+    <a href="index.html">Ana Sayfa</a>
+    <a href="yazilim.html">Yazılım</a>
+    <a href="ai.html">AI Araçları</a>
+    <a href="sablonlar.html">Şablonlar</a>
+    <a href="blog.html">Blog</a>
+    <a href="iletisim.html">İletişim</a>
+  </div>
+</div>
+
+<div class="container">
+
+<h1>HTML Eğitimi</h1>
+<p>HTML, bir web sayfasının iskeletini oluşturan temel yapıdır. Etiketlerle çalışır ve tarayıcıya "bu nedir?" bilgisini verir.</p>
+
+<div class="section">
+  <h2>1. HTML Yapısı</h2>
+  <p>Her HTML dosyası temel olarak aşağıdaki yapıyla başlar:</p>
+
+  <div class="code">
+&lt;!DOCTYPE html&gt;
+&lt;html lang="tr"&gt;
+&lt;head&gt;
+  &lt;meta charset="UTF-8"&gt;
+  &lt;title&gt;Başlık&lt;/title&gt;
+&lt;/head&gt;
+
+&lt;body&gt;
+  Buraya sayfa içeriği gelir.
+&lt;/body&gt;
+&lt;/html&gt;
+  </div>
+</div>
+
+<div class="section">
+  <h2>2. En Çok Kullanılan Etiketler</h2>
+
+  <p><b>&lt;h1&gt; - &lt;h6&gt;</b> → Başlık etiketleri</p>
+  <p><b>&lt;p&gt;</b> → Paragraf</p>
+  <p><b>&lt;a href=""&gt;</b> → Link</p>
+  <p><b>&lt;img src=""&gt;</b> → Görsel</p>
+  <p><b>&lt;div&gt;</b> → Bölüm / kapsayıcı</p>
+
+  <div class="code">
+&lt;h1&gt;Merhaba Dünya&lt;/h1&gt;
+&lt;p&gt;Bu bir paragraftır.&lt;/p&gt;
+&lt;a href="https://korvex.com"&gt;Korvex'e git&lt;/a&gt;
+&lt;img src="logo.png" width="150"&gt;
+  </div>
+</div>
+
+<div class="section">
+  <h2>3. Liste Yapıları</h2>
+
+  <div class="code">
+&lt;ul&gt;
+  &lt;li&gt;Madde 1&lt;/li&gt;
+  &lt;li&gt;Madde 2&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Sıralı 1&lt;/li&gt;
+  &lt;li&gt;Sıralı 2&lt;/li&gt;
+&lt;/ol&gt;
+  </div>
+</div>
+
+<div class="section">
+  <h2>4. Basit Bir HTML Şablonu</h2>
+
+  <div class="code">
+&lt;div class="kart"&gt;
+  &lt;img src="urun.jpg"&gt;
+  &lt;h3&gt;Ürün Adı&lt;/h3&gt;
+  &lt;p&gt;Kısa açıklama.&lt;/p&gt;
+  &lt;a href="#"&gt;Satın Al&lt;/a&gt;
+&lt;/div&gt;
+  </div>
+</div>
+
+</div>
+
+<footer>
+© 2025 KORVEX — ÖMER FARUK ÖZCAN Tüm Hakları Saklıdır
+<br>
+<a href="https://instagram.com/omerozcn00"><img src="instagram.svg"></a>
+</footer>
+
+</body>
+</html>

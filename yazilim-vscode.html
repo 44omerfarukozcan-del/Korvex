@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<title>VS Code Eğitimi — KORVEX</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;800&display=swap" rel="stylesheet">
+
+<style>
+body {
+  margin:0;
+  padding:0;
+  background:#0b0d13;
+  color:#fff;
+  font-family:'Inter',sans-serif;
+}
+
+/* NAVBAR */
+.navbar {
+  width:100%;
+  padding:22px 50px;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  background:rgba(15,17,26,0.8);
+  border-bottom:1px solid rgba(255,255,255,.08);
+  backdrop-filter:blur(12px);
+}
+
+.nav-left {display:flex;align-items:center;gap:14px;}
+.logo-img {width:55px;}
+.nav-name {font-size:28px;font-weight:800;}
+
+.nav-links a {
+  margin-left:35px;
+  color:white;
+  opacity:.85;
+  text-decoration:none;
+  transition:.25s;
+}
+.nav-links a:hover {opacity:1;color:#3bafff;}
+
+/* CONTENT */
+.container {
+  width:90%;
+  max-width:900px;
+  margin:60px auto 100px;
+}
+
+h1 {font-size:40px;font-weight:800;margin-bottom:10px;}
+p {opacity:.85;line-height:1.7;margin-bottom:14px;font-size:15px;}
+
+.section {
+  margin-top:50px;
+  background:#12141c;
+  border:1px solid #1c1f29;
+  border-radius:14px;
+  padding:24px;
+}
+
+.section h2 {
+  font-size:26px;
+  font-weight:700;
+  margin-bottom:12px;
+}
+
+.code {
+  background:#0f111a;
+  padding:18px;
+  border-radius:10px;
+  font-family:monospace;
+  font-size:14px;
+  white-space:pre-wrap;
+  border:1px solid #1c1f29;
+  margin-top:10px;
+  color:#9ed0ff;
+}
+
+/* FOOTER */
+footer {
+  padding:30px;
+  text-align:center;
+  background:#10121a;
+  border-top:1px solid rgba(255,255,255,.06);
+}
+footer img {width:28px;margin-top:10px;opacity:.85;}
+footer img:hover {opacity:1;}
+</style>
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<div class="navbar">
+  <div class="nav-left">
+    <img src="logo.svg" class="logo-img">
+    <div class="nav-name">KORVEX</div>
+  </div>
+  <div class="nav-links">
+    <a href="index.html">Ana Sayfa</a>
+    <a href="yazilim.html">Yazılım</a>
+    <a href="ai.html">AI Araçları</a>
+    <a href="sablonlar.html">Şablonlar</a>
+    <a href="blog.html">Blog</a>
+    <a href="iletisim.html">İletişim</a>
+  </div>
+</div>
+
+<!-- CONTENT -->
+<div class="container">
+
+<h1>Visual Studio Code Eğitimi</h1>
+<p>VS Code, yazılım geliştiricilerinin en çok kullandığı modern ve hafif bir kod editörüdür. Eklentiler, temalar, kısayollar ve özellikler sayesinde çok güçlü bir geliştirme ortamı sunar.</p>
+
+<!-- SECTION 1 -->
+<div class="section">
+  <h2>1. VS Code Nedir?</h2>
+  <p>Microsoft tarafından geliştirilen ücretsiz bir editördür. HTML, CSS, JavaScript, Python, C#, Java ve daha birçok dili destekler.</p>
+</div>
+
+<!-- SECTION 2 -->
+<div class="section">
+  <h2>2. En Önemli Eklentiler</h2>
+
+  <p>VS Code’u daha güçlü yapan şey eklentilerdir. En çok kullanılanlar:</p>
+
+  <p>• Live Server — HTML dosyalarını canlı çalıştırma  
+     • Prettier — Otomatik kod düzenleme  
+     • Material Icon Theme — Dosya ikonları  
+     • Python — Python geliştirme aracı  
+     • GitLens — Git geçmişi görüntüleme</p>
+
+</div>
+
+<!-- SECTION 3 -->
+<div class="section">
+  <h2>3. Kısayollar (Çok Önemli)</h2>
+
+  <div class="code">
+CTRL + B     → Sol paneli aç/kapa  
+CTRL + S     → Kaydet  
+CTRL + K + C → Seçili alanı yoruma al  
+CTRL + SHIFT + P → Komut paleti  
+ALT + YUKARI/AŞAĞI → Satır taşı  
+  </div>
+</div>
+
+<!-- SECTION 4 -->
+<div class="section">
+  <h2>4. Tema ve Görünüm Ayarları</h2>
+
+  <p>VS Code istediğin gibi özelleştirilebilir. En popüler temalar:</p>
+
+  <p>• Ayu  
+     • Dracula  
+     • One Dark Pro  
+     • Tokyo Night  
+     • Night Owl</p>
+
+</div>
+
+<!-- SECTION 5 -->
+<div class="section">
+  <h2>5. Live Server Kullanımı</h2>
+  <p>Web geliştiriciler için en faydalı eklentidir.</p>
+
+  <div class="code">
+• HTML dosyasına sağ tık → "Open with Live Server"  
+• Tarayıcıda anında güncelleme sağlar  
+  </div>
+</div>
+
+</div>
+
+<!-- FOOTER -->
+<footer>
+© 2025 KORVEX — ÖMER FARUK ÖZCAN Tüm Hakları Saklıdır
+<br>
+<a href="https://instagram.com/omerozcn00" target="_blank">
+<img src="instagram.svg">
+</a>
+</footer>
+
+</body>
+</html>

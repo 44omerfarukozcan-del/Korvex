@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<title>JavaScript Eğitimi — KORVEX</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;800&display=swap" rel="stylesheet">
+
+<style>
+body {
+  margin:0;
+  padding:0;
+  background:#0b0d13;
+  color:#fff;
+  font-family:'Inter',sans-serif;
+}
+
+/* NAVBAR */
+.navbar {
+  width:100%;
+  padding:22px 50px;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  background:rgba(15,17,26,0.8);
+  border-bottom:1px solid rgba(255,255,255,.08);
+  backdrop-filter:blur(12px);
+}
+
+.nav-left {display:flex;align-items:center;gap:14px;}
+.logo-img {width:55px;}
+.nav-name {font-size:28px;font-weight:800;}
+
+.nav-links a {
+  margin-left:35px;
+  color:white;
+  opacity:.85;
+  text-decoration:none;
+  transition:.25s;
+}
+.nav-links a:hover {opacity:1;color:#3bafff;}
+
+/* CONTENT */
+.container {
+  width:90%;
+  max-width:900px;
+  margin:60px auto 100px;
+}
+
+h1 {font-size:40px;font-weight:800;margin-bottom:10px;}
+p {opacity:.85;line-height:1.7;margin-bottom:14px;font-size:15px;}
+
+.section {
+  margin-top:50px;
+  background:#12141c;
+  border:1px solid #1c1f29;
+  border-radius:14px;
+  padding:24px;
+}
+
+.section h2 {
+  font-size:26px;
+  font-weight:700;
+  margin-bottom:12px;
+}
+
+.code {
+  background:#0f111a;
+  padding:18px;
+  border-radius:10px;
+  font-family:monospace;
+  font-size:14px;
+  white-space:pre-wrap;
+  border:1px solid #1c1f29;
+  margin-top:10px;
+  color:#9ed0ff;
+}
+
+/* FOOTER */
+footer {
+  padding:30px;
+  text-align:center;
+  background:#10121a;
+  border-top:1px solid rgba(255,255,255,.06);
+}
+footer img {width:28px;margin-top:10px;opacity:.85;}
+footer img:hover {opacity:1;}
+</style>
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<div class="navbar">
+  <div class="nav-left">
+    <img src="logo.svg" class="logo-img">
+    <div class="nav-name">KORVEX</div>
+  </div>
+  <div class="nav-links">
+    <a href="index.html">Ana Sayfa</a>
+    <a href="yazilim.html">Yazılım</a>
+    <a href="ai.html">AI Araçları</a>
+    <a href="sablonlar.html">Şablonlar</a>
+    <a href="blog.html">Blog</a>
+    <a href="iletisim.html">İletişim</a>
+  </div>
+</div>
+
+<!-- CONTENT -->
+<div class="container">
+
+<h1>JavaScript Eğitimi</h1>
+<p>JavaScript, web sayfalarına hareket ve etkileşim ekleyen programlama dilidir. Butona basınca açılan menüler, animasyonlar, API ile veri çekme gibi tüm dinamik işlemler JS ile yapılır.</p>
+
+<!-- SECTION 1 -->
+<div class="section">
+  <h2>1. Değişkenler</h2>
+  <p>JS’de değer saklamak için <b>let</b>, <b>const</b> ve <b>var</b> kullanılır.</p>
+
+  <div class="code">
+// Değişken örnekleri
+let isim = "Ömer";
+const yas = 20;
+var sehir = "Samsun";
+
+console.log(isim);
+  </div>
+</div>
+
+<!-- SECTION 2 -->
+<div class="section">
+  <h2>2. Fonksiyonlar</h2>
+  <p>Bir işlemi tekrar tekrar kullanmak için fonksiyon oluştururuz.</p>
+
+  <div class="code">
+function selamVer() {
+  console.log("Merhaba!");
+}
+
+selamVer();
+  </div>
+</div>
+
+<!-- SECTION 3 -->
+<div class="section">
+  <h2>3. DOM Manipülasyonu</h2>
+  <p>JavaScript ile HTML öğelerine erişip değiştirebilirsin.</p>
+
+  <div class="code">
+document.getElementById("baslik").innerText = "KORVEX JS Eğitimi";
+  </div>
+</div>
+
+<!-- SECTION 4 -->
+<div class="section">
+  <h2>4. Event (Olay) Kullanımı</h2>
+  <p>Tıklama, yazma, hover gibi olayları kontrol ederiz.</p>
+
+  <div class="code">
+document.querySelector("#btn").addEventListener("click", function() {
+  alert("Butona basıldı!");
+});
+  </div>
+</div>
+
+<!-- SECTION 5 -->
+<div class="section">
+  <h2>5. API'den Veri Çekme</h2>
+  <p>fetch() ile internetten veri alabilirsin.</p>
+
+  <div class="code">
+fetch("https://jsonplaceholder.typicode.com/posts")
+  .then(res => res.json())
+  .then(data => console.log(data));
+  </div>
+</div>
+
+</div>
+
+<!-- FOOTER -->
+<footer>
+© 2025 KORVEX — ÖMER FARUK ÖZCAN Tüm Hakları Saklıdır
+<br>
+<a href="https://instagram.com/omerozcn00" target="_blank">
+<img src="instagram.svg">
+</a>
+</footer>
+
+</body>
+</html>

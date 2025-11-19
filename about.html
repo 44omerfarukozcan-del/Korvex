@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>KORVEX — Hakkımızda</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800;900&display=swap" rel="stylesheet">
+
+<style>
+*{margin:0;padding:0;box-sizing:border-box;}
+body{
+    background:#0b0d13;
+    font-family:"Inter",sans-serif;
+    color:white;
+    overflow-x:hidden;
+}
+
+/* GLOW */
+.glow{
+    position:absolute;
+    width:450px;height:450px;
+    background:radial-gradient(circle,rgba(59,175,255,.4),rgba(59,175,255,0));
+    filter:blur(60px);
+}
+.glow:nth-child(1){top:-120px;left:-120px;}
+.glow:nth-child(2){bottom:-120px;right:-120px;}
+
+/* NAVBAR */
+.navbar{
+    width:100%;
+    padding:22px 50px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    background:rgba(15,17,26,.8);
+    border-bottom:1px solid rgba(255,255,255,.08);
+    backdrop-filter:blur(12px);
+    position:sticky;top:0;z-index:10;
+}
+.nav-left{display:flex;align-items:center;gap:14px;}
+.logo-img{width:55px;}
+.nav-name{font-size:28px;font-weight:800;}
+.nav-links a{
+    margin-left:35px;
+    text-decoration:none;
+    color:white;
+    opacity:.8;
+    transition:.25s;
+}
+.nav-links a:hover{opacity:1;color:#3bafff;}
+.ig-icon{width:26px;opacity:.8;transition:.25s;}
+.ig-icon:hover{opacity:1;}
+
+/* HERO */
+.hero{
+    padding:140px 20px 80px;
+    text-align:center;
+}
+.hero h1{
+    font-size:60px;
+    font-weight:900;
+    background:linear-gradient(90deg,#fff,#9acbff);
+    -webkit-background-clip:text;
+    color:transparent;
+}
+.hero p{
+    margin-top:12px;
+    opacity:.75;
+    font-size:20px;
+}
+
+/* CONTENT */
+.section{
+    width:80%;
+    margin:50px auto;
+    background:#12141c;
+    padding:40px;
+    border-radius:16px;
+    border:1px solid #1c1f29;
+    box-shadow:0 0 30px rgba(59,175,255,.12);
+}
+
+.section h2{
+    font-size:32px;
+    margin-bottom:18px;
+    font-weight:800;
+}
+
+.section p{
+    font-size:18px;
+    opacity:.85;
+    line-height:1.7;
+}
+
+/* CARD GRID */
+.grid{
+    margin-top:40px;
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+    gap:25px;
+}
+.card{
+    background:#151723;
+    padding:22px;
+    border-radius:14px;
+    border:1px solid #1c1f29;
+    transition:.25s;
+}
+.card:hover{
+    border-color:#3bafff;
+    box-shadow:0 0 20px rgba(59,175,255,.15);
+}
+.card h3{
+    font-size:22px;
+    margin-bottom:10px;
+}
+.card p{
+    font-size:16px;
+    opacity:.75;
+}
+
+/* FOOTER */
+footer{
+    margin-top:80px;
+    padding:35px;
+    text-align:center;
+    background:#10121a;
+    border-top:1px solid rgba(255,255,255,.06);
+}
+footer img{
+    width:28px;
+    opacity:.85;
+}
+footer img:hover{opacity:1;}
+/* MOBILE MENU */
+.hamburger{
+    display:none;
+    width:34px;
+    cursor:pointer;
+}
+
+.hamburger div{
+    height:4px;
+    background:white;
+    margin:6px 0;
+    border-radius:4px;
+    transition:.3s;
+}
+
+/* MOBILE NAV PANEL */
+.mobile-menu{
+    position:fixed;
+    top:0;
+    right:-100%;
+    width:75%;
+    height:100vh;
+    background:#12141c;
+    padding:40px 30px;
+    z-index:999;
+    transition:.4s;
+    display:flex;
+    flex-direction:column;
+}
+
+.mobile-menu a{
+    color:white;
+    text-decoration:none;
+    font-size:20px;
+    margin:18px 0;
+    opacity:.85;
+    transition:.25s;
+}
+.mobile-menu a:hover{
+    color:#3bafff;
+    opacity:1;
+}
+
+/* DARK OVERLAY */
+.overlay{
+    position:fixed;
+    top:0;left:0;
+    width:100%;height:100%;
+    background:rgba(0,0,0,.55);
+    backdrop-filter:blur(6px);
+    z-index:998;
+    display:none;
+}
+
+/* RESPONSIVE */
+@media(max-width:900px){
+    .nav-links{
+        display:none;
+    }
+    .hamburger{
+        display:block;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<div class="glow"></div>
+<div class="glow"></div>
+
+<!-- NAVBAR -->
+<div class="navbar">
+  <div class="nav-left">
+    <img src="logo.svg" class="logo-img">
+    <div class="nav-name">KORVEX</div>
+  </div>
+
+  <div class="nav-links">
+    <a href="index.html">Ana Sayfa</a>
+    <a href="yazilim.html">Yazılım</a>
+    <a href="ai.html">AI Araçları</a>
+    <a href="sablonlar.html">Şablonlar</a>
+    <a href="blog.html">Blog</a>
+    <a href="about.html" style="color:#3bafff;">Hakkımızda</a>
+
+    <a href="https://instagram.com/omerozcn00" target="_blank">
+      <img src="instagram.svg" class="ig-icon">
+    </a>
+  </div>
+</div>
+
+<!-- HERO -->
+<div class="hero">
+  <h1>Hakkımızda</h1>
+  <p>KORVEX — Kodla. Üret. Geliştir.</p>
+</div>
+
+<!-- ABOUT SECTION -->
+<div class="section">
+  <h2>KORVEX Nedir?</h2>
+  <p>
+    KORVEX, modern yazılım geliştirme, yapay zekâ araçları, web tasarım şablonları ve teknoloji içeriklerini tek platformda birleştiren gelişmiş bir dijital sistemdir.
+    Amacımız, özellikle genç geliştiricilere ve girişimcilere en temiz, en modern ve en hızlı şekilde üretim yapabilecekleri araçlar sunmaktır.
+  </p>
+</div>
+
+<div class="section">
+  <h2>Vizyonumuz</h2>
+  <p>
+    Teknolojiyi herkes için ulaşılabilir kılmak.
+    Kod bilgisi olsun olmasın; herkesin web, yazılım, içerik üretimi ve yapay zekâ araçlarını basit, anlaşılır bir şekilde kullanmasını sağlamak.
+  </p>
+</div>
+
+<div class="section">
+  <h2>Çekirdek Değerlerimiz</h2>
+
+  <div class="grid">
+    <div class="card">
+      <h3>🚀 İnovasyon</h3>
+      <p>Modern UI, ışık efektleri, AI entegrasyonu ve hız odaklı teknoloji.</p>
+    </div>
+
+    <div class="card">
+      <h3>💡 Öğrenme</h3>
+      <p>Genç geliştiricilere premium yazılım eğitim içerikleri.</p>
+    </div>
+
+    <div class="card">
+      <h3>🤖 AI Odaklılık</h3>
+      <p>Geleceğin araçlarını bugünün kullanıcılarına sunuyoruz.</p>
+    </div>
+
+    <div class="card">
+      <h3>🎨 Tasarım Kalitesi</h3>
+      <p>Dark UI, glassmorphism, glow efektleri ve tek tip premium stil.</p>
+    </div>
+  </div>
+
+</div>
+
+<!-- FOOTER -->
+<footer>
+  © 2025 KORVEX — ÖMER FARUK ÖZCAN Tüm Hakları Saklıdır <br>
+  <a href="https://instagram.com/omerozcn00" target="_blank">
+      <img src="instagram.svg">
+  </a>
+</footer>
+
+</body>
+</html>

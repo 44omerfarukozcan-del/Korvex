@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>E-Commerce Template — Önizleme | KORVEX</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;900&display=swap" rel="stylesheet">
+
+<style>
+body{
+    margin:0;padding:0;
+    font-family:'Inter',sans-serif;
+    background:#0b0d13;color:white;
+    overflow-x:hidden;
+}
+.glow{
+    position:absolute;width:450px;height:450px;
+    background:radial-gradient(circle,rgba(59,175,255,.4),transparent);
+    filter:blur(60px);
+}
+.glow:nth-child(1){top:-120px;left:-120px;}
+.glow:nth-child(2){bottom:-120px;right:-120px;}
+
+/* NAVBAR */
+.navbar{
+    width:100%;padding:22px 50px;
+    display:flex;justify-content:space-between;align-items:center;
+    background:rgba(15,17,26,.8);backdrop-filter:blur(12px);
+    border-bottom:1px solid rgba(255,255,255,.08);
+}
+.nav-left{display:flex;align-items:center;gap:14px;}
+.logo-img{width:55px;}
+.nav-name{font-size:28px;font-weight:900;}
+.nav-links a{
+    margin-left:35px;color:white;text-decoration:none;
+    opacity:.75;transition:.25s;
+}
+.nav-links a:hover{color:#3bafff;opacity:1;}
+
+/* HERO */
+.hero{
+    padding:140px 20px 110px;
+    text-align:center;
+}
+.hero h1{
+    font-size:58px;font-weight:900;
+    background:linear-gradient(90deg,#fff,#a9d1ff);
+    -webkit-background-clip:text;color:transparent;
+}
+.hero p{
+    opacity:.75;margin-top:12px;font-size:20px;
+}
+
+/* PRODUCT GRID */
+.grid{
+    width:90%;margin:auto;
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+    gap:28px;margin-bottom:80px;
+}
+.card{
+    background:#12141c;
+    border:1px solid #1c1f29;
+    border-radius:16px;
+    padding:18px;
+    transition:.25s;
+}
+.card:hover{
+    border-color:#3bafff;
+    transform:translateY(-5px);
+}
+.card img{
+    width:100%;
+    border-radius:12px;
+    margin-bottom:12px;
+}
+.card h3{
+    font-size:20px;
+}
+.price{
+    margin:6px 0;
+    font-size:20px;font-weight:700;
+}
+.old-price{
+    opacity:.5;
+    text-decoration:line-through;
+    margin-left:8px;
+}
+.stock{
+    background:#3bafff;color:#0b0d13;
+    display:inline-block;
+    padding:5px 10px;
+    font-size:13px;
+    border-radius:6px;
+    margin-top:5px;
+    font-weight:700;
+}
+.btn-buy{
+    margin-top:14px;
+    display:inline-block;
+    padding:12px 22px;
+    background:#3bafff;
+    color:#0b0d13;
+    font-weight:700;
+    border-radius:12px;
+    text-decoration:none;
+    transition:.25s;
+}
+.btn-buy:hover{transform:translateY(-4px);}
+
+/* FOOTER */
+footer{
+    background:#10121a;
+    padding:35px;
+    text-align:center;
+    border-top:1px solid rgba(255,255,255,.06);
+}
+footer img{width:28px;margin-top:10px;opacity:.85;}
+footer img:hover{opacity:1;}
+</style>
+</head>
+
+<body>
+
+<div class="glow"></div>
+<div class="glow"></div>
+
+<!-- NAVBAR -->
+<div class="navbar">
+  <div class="nav-left">
+    <img src="logo.svg" class="logo-img">
+    <div class="nav-name">KORVEX</div>
+  </div>
+  <div class="nav-links">
+    <a href="sablonlar.html">← Şablonlara Dön</a>
+  </div>
+</div>
+
+<!-- HERO -->
+<div class="hero">
+  <h1>E-Ticaret Ürün Sayfası</h1>
+  <p>Modern ürün kartları ve responsive e-ticaret tasarımı</p>
+</div>
+
+<!-- PRODUCT GRID -->
+<div class="grid">
+
+  <div class="card">
+  <img src=https://images.pexels.com/photos/373945/pexels-photo-373945.jpeg?auto=compress&cs=tinysrgb&w=800>
+  <h3>Bluetooth Kulaklık</h3>
+  <div class="price">₺599 <span class="old-price">₺799</span></div>
+  <span class="stock">Stokta</span>
+  <a class="btn-buy" href="#">Satın Al</a>
+</div>
+
+<div class="card">
+  <img src="https://images.pexels.com/photos/277406/pexels-photo-277406.jpeg?auto=compress&cs=tinysrgb&w=800">
+  <h3>Akıllı Saat</h3>
+  <div class="price">₺1.299 <span class="old-price">₺1.499</span></div>
+  <span class="stock">Stokta</span>
+  <a class="btn-buy" href="#">Satın Al</a>
+</div>
+
+<div class="card">
+  <img src=https://images.pexels.com/photos/276517/pexels-photo-276517.jpeg?auto=compress&cs=tinysrgb&w=800>
+  <h3>RGB Mekanik Klavye</h3>
+  <div class="price">₺899 <span class="old-price">₺999</span></div>
+  <span class="stock">Son 3 ürün</span>
+  <a class="btn-buy" href="#">Satın Al</a>
+</div>
+
+<div class="card">
+  <img src=https://images.pexels.com/photos/57007/mouse-computer-click-57007.jpeg?auto=compress&cs=tinysrgb&w=800>
+  <h3>Gaming Mouse</h3>
+  <div class="price">₺459 <span class="old-price">₺599</span></div>
+  <span class="stock">Stokta</span>
+  <a class="btn-buy" href="#">Satın Al</a>
+</div>
+
+</div>
+
+<!-- FOOTER -->
+<footer>
+© 2025 KORVEX — ÖMER FARUK ÖZCAN Tüm Hakları Saklıdır<br>
+<a href="https://instagram.com/omerozcn00" target="_blank">
+<img src="instagram.svg">
+</a>
+</footer>
+
+</body>
+</html>

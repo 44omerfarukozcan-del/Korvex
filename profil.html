@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>KORVEX — Profil</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800;900&display=swap" rel="stylesheet">
+
+<style>
+*{margin:0;padding:0;box-sizing:border-box;}
+body{
+    font-family:"Inter",sans-serif;
+    background:#0b0d13;
+    color:white;
+    overflow-x:hidden;
+}
+
+/* Glow */
+.glow{
+    position:absolute;
+    width:450px;height:450px;
+    background:radial-gradient(circle,rgba(59,175,255,.35),rgba(59,175,255,0));
+    filter:blur(70px);
+}
+.glow:nth-child(1){top:-120px;left:-120px;}
+.glow:nth-child(2){bottom:-120px;right:-120px;}
+
+/* NAVBAR */
+.navbar{
+    width:100%;
+    padding:22px 50px;
+    display:flex;justify-content:space-between;align-items:center;
+    background:rgba(15,17,26,.8);
+    backdrop-filter:blur(12px);
+    border-bottom:1px solid rgba(255,255,255,.08);
+    position:sticky;top:0;z-index:10;
+}
+.nav-left{display:flex;align-items:center;gap:14px;}
+.logo-img{width:55px;}
+.nav-name{font-size:28px;font-weight:800;}
+.nav-links a{
+    margin-left:35px;
+    text-decoration:none;color:white;
+    opacity:.85;transition:.25s;
+}
+.nav-links a:hover{opacity:1;color:#3bafff;}
+.ig-icon{width:26px;opacity:.8;transition:.25s;}
+.ig-icon:hover{opacity:1;}
+
+/* PROFILE CONTAINER */
+.profile-container{
+    width:85%;
+    margin:120px auto;
+    background:#12141c;
+    border-radius:20px;
+    border:1px solid #1c1f29;
+    padding:50px;
+    box-shadow:0 0 30px rgba(59,175,255,.12);
+}
+
+/* TOP SECTION */
+.profile-top{
+    display:flex;
+    align-items:center;
+    gap:35px;
+    flex-wrap:wrap;
+}
+
+.profile-img{
+    width:145px;height:145px;
+    border-radius:50%;
+    object-fit:cover;
+    border:3px solid #3bafff;
+    box-shadow:0 0 20px rgba(59,175,255,.35);
+}
+
+.profile-name{
+    font-size:34px;
+    font-weight:800;
+}
+
+.profile-username{
+    opacity:.7;
+    margin-top:6px;
+}
+
+/* STATS */
+.stats{
+    margin-top:35px;
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(160px,1fr));
+    gap:20px;
+}
+
+.stat-card{
+    background:#151723;
+    padding:22px;
+    border-radius:14px;
+    border:1px solid #1c1f29;
+    transition:.25s;
+}
+.stat-card:hover{
+    border-color:#3bafff;
+    transform:translateY(-6px);
+}
+.stat-card h3{
+    font-size:20px;
+    opacity:.85;
+}
+.stat-card p{
+    font-size:28px;
+    font-weight:800;
+    margin-top:8px;
+}
+
+/* BUTTONS */
+.btn-row{
+    margin-top:40px;
+    display:flex;
+    gap:15px;
+    flex-wrap:wrap;
+}
+
+.btn{
+    padding:14px 28px;
+    background:#3bafff;
+    color:#0b0d13;
+    border-radius:12px;
+    font-size:18px;
+    font-weight:700;
+    cursor:pointer;
+    text-decoration:none;
+    transition:.25s;
+}
+.btn:hover{
+    transform:translateY(-4px);
+}
+
+/* FOOTER */
+footer{
+    margin-top:70px;
+    padding:35px;
+    text-align:center;
+    background:#10121a;
+    border-top:1px solid rgba(255,255,255,.06);
+}
+footer img{
+    width:28px;
+    opacity:.85;
+}
+footer img:hover{opacity:1;}
+/* MOBILE MENU */
+.hamburger{
+    display:none;
+    width:34px;
+    cursor:pointer;
+}
+
+.hamburger div{
+    height:4px;
+    background:white;
+    margin:6px 0;
+    border-radius:4px;
+    transition:.3s;
+}
+
+/* MOBILE NAV PANEL */
+.mobile-menu{
+    position:fixed;
+    top:0;
+    right:-100%;
+    width:75%;
+    height:100vh;
+    background:#12141c;
+    padding:40px 30px;
+    z-index:999;
+    transition:.4s;
+    display:flex;
+    flex-direction:column;
+}
+
+.mobile-menu a{
+    color:white;
+    text-decoration:none;
+    font-size:20px;
+    margin:18px 0;
+    opacity:.85;
+    transition:.25s;
+}
+.mobile-menu a:hover{
+    color:#3bafff;
+    opacity:1;
+}
+
+/* DARK OVERLAY */
+.overlay{
+    position:fixed;
+    top:0;left:0;
+    width:100%;height:100%;
+    background:rgba(0,0,0,.55);
+    backdrop-filter:blur(6px);
+    z-index:998;
+    display:none;
+}
+
+/* RESPONSIVE */
+@media(max-width:900px){
+    .nav-links{
+        display:none;
+    }
+    .hamburger{
+        display:block;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<div class="glow"></div>
+<div class="glow"></div>
+
+<!-- NAVBAR -->
+<div class="navbar">
+    <div class="nav-left">
+        <img src="logo.svg" class="logo-img">
+        <div class="nav-name">KORVEX</div>
+    </div>
+
+    <div class="nav-links">
+        <a href="index.html">Ana Sayfa</a>
+        <a href="yazilim.html">Yazılım</a>
+        <a href="ai.html">AI Araçları</a>
+        <a href="sablonlar.html">Şablonlar</a>
+        <a href="blog.html">Blog</a>
+        <a href="about.html">Hakkımızda</a>
+        <a href="iletisim.html">İletişim</a>
+
+        <a href="https://instagram.com/omerozcn00" target="_blank">
+            <img src="instagram.svg" class="ig-icon">
+        </a>
+    </div>
+</div>
+
+<!-- PROFILE -->
+<div class="profile-container">
+
+    <div class="profile-top">
+        <img src="https://images.pexels.com/photos/614810/pexels-photo-614810.jpeg?auto=compress&cs=tinysrgb&w=800"
+             class="profile-img">
+
+        <div>
+            <div class="profile-name">Ömer Faruk Özcan</div>
+            <div class="profile-username">@omerozcn00</div>
+        </div>
+    </div>
+
+    <!-- STATS -->
+    <div class="stats">
+
+        <div class="stat-card">
+            <h3>Blog Yazıları</h3>
+            <p>48</p>
+        </div>
+
+        <div class="stat-card">
+            <h3>AI Araç Kullanımı</h3>
+            <p>312</p>
+        </div>
+
+        <div class="stat-card">
+            <h3>Favori Şablonlar</h3>
+            <p>19</p>
+        </div>
+
+        <div class="stat-card">
+            <h3>Ziyaretçiler</h3>
+            <p>4.2K</p>
+        </div>
+
+    </div>
+
+    <!-- BUTTONS -->
+    <div class="btn-row">
+        <a href="ayarlar.html" class="btn">Ayarlar</a>
+        <a href="dashboard.html" class="btn">Yönetici Paneli</a>
+        <a href="login.html" class="btn">Çıkış Yap</a>
+    </div>
+
+</div>
+
+<!-- FOOTER -->
+<footer>
+  © 2025 KORVEX — ÖMER FARUK ÖZCAN Tüm Hakları Saklıdır <br>
+  <a href="https://instagram.com/omerozcn00" target="_blank">
+      <img src="instagram.svg">
+  </a>
+</footer>
+
+</body>
+</html>

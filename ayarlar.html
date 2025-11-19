@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<title>KORVEX — Ayarlar & Hesap Paneli</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;800;900&display=swap" rel="stylesheet">
+
+<style>
+body{
+  margin:0;
+  padding:0;
+  background:#0b0d13;
+  color:white;
+  font-family:'Inter',sans-serif;
+}
+
+/* NAVBAR */
+.navbar{
+  width:100%;
+  padding:22px 50px;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  background:rgba(15,17,26,0.8);
+  border-bottom:1px solid rgba(255,255,255,0.08);
+  backdrop-filter:blur(12px);
+}
+.nav-left{display:flex;align-items:center;gap:14px;}
+.logo-img{width:55px;}
+.nav-name{font-size:28px;font-weight:900;}
+.nav-links a{
+  margin-left:35px;
+  text-decoration:none;
+  color:white;
+  opacity:.85;
+  transition:.25s;
+}
+.nav-links a:hover{opacity:1;color:#3bafff;}
+
+/* PAGE HEADER */
+.header{
+  width:90%;
+  margin:60px auto 20px;
+}
+.header h1{
+  font-size:38px;
+  font-weight:900;
+}
+.header p{
+  opacity:.8;
+}
+
+/* GRID */
+.panel-grid{
+  width:90%;
+  margin:40px auto 100px;
+  display:grid;
+  grid-template-columns:repeat(auto-fit, minmax(300px, 1fr));
+  gap:28px;
+}
+
+/* CARDS */
+.panel-card{
+  background:#12141c;
+  border:1px solid #1c1f29;
+  border-radius:16px;
+  padding:24px;
+  transition:.25s;
+}
+.panel-card:hover{
+  border-color:#3bafff;
+  box-shadow:0 0 20px rgba(59,175,255,0.15);
+  transform:translateY(-4px);
+}
+.panel-title{
+  font-size:22px;
+  font-weight:800;
+  margin-bottom:12px;
+}
+.panel-text{
+  opacity:.75;
+  font-size:14px;
+  margin-bottom:14px;
+}
+
+/* PROFILE CARD */
+.profile-pic{
+  width:110px;
+  height:110px;
+  border-radius:50%;
+  background:#0f111a;
+  border:2px solid #3bafff;
+  margin-bottom:16px;
+}
+
+/* INPUTS */
+input, select{
+  width:100%;
+  padding:12px;
+  border-radius:10px;
+  border:1px solid #1c1f29;
+  background:#0f111a;
+  color:white;
+  margin-bottom:12px;
+  outline:none;
+  font-size:14px;
+}
+input:focus{
+  border-color:#3bafff;
+}
+
+/* BUTTON */
+.btn{
+  background:#3bafff;
+  color:#0b0d13;
+  padding:12px 22px;
+  border-radius:10px;
+  font-weight:700;
+  display:inline-block;
+  text-decoration:none;
+  margin-top:10px;
+  transition:.25s;
+}
+.btn:hover{transform:translateY(-3px);}
+
+/* FOOTER */
+footer{
+  padding:40px 20px;
+  background:#10121a;
+  text-align:center;
+  border-top:1px solid rgba(255,255,255,0.06);
+}
+footer img{width:28px;margin-top:10px;opacity:.8;}
+footer img:hover{opacity:1;}
+</style>
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<div class="navbar">
+  <div class="nav-left">
+    <img src="logo.svg" class="logo-img">
+    <div class="nav-name">KORVEX</div>
+  </div>
+
+  <div class="nav-links">
+    <a href="index.html">Ana Sayfa</a>
+    <a href="yazilim.html">Yazılım</a>
+    <a href="ai.html">AI Araçları</a>
+    <a href="sablonlar.html">Şablonlar</a>
+    <a href="blog.html">Blog</a>
+    <a href="iletisim.html">İletişim</a>
+    <a href="ayarlar.html">Ayarlar</a>
+  </div>
+</div>
+
+<!-- HEADER -->
+<div class="header">
+  <h1>Hesap & Ayar Paneli</h1>
+  <p>Profil bilgilerini yönet, hesap güvenliğini artır, sosyal bağlantılarını güncelle.</p>
+</div>
+
+<!-- GRID -->
+<div class="panel-grid">
+
+  <!-- PROFILE -->
+  <div class="panel-card">
+    <div class="panel-title">Profil</div>
+    <img src="profile.jpg" class="profile-pic">
+    <div class="panel-text">Profil fotoğrafını güncelle ve kişisel bilgilerini düzenle.</div>
+
+    <input type="text" placeholder="Ad Soyad" value="Ömer Faruk Özcan">
+    <input type="email" placeholder="E-posta" value="omerrfarukozcann@gmail.com">
+    <input type="text" placeholder="Kullanıcı Adı" value="omerozcan">
+    <a class="btn">Kaydet</a>
+  </div>
+
+  <!-- SECURITY -->
+  <div class="panel-card">
+    <div class="panel-title">Hesap Güvenliği</div>
+    <div class="panel-text">Şifre güncelleme, oturum yönetimi ve ek güvenlik seçenekleri.</div>
+
+    <input type="password" placeholder="Yeni Şifre">
+    <input type="password" placeholder="Yeni Şifre (Tekrar)">
+    <select>
+      <option>2FA: Kapalı</option>
+      <option>2FA: SMS ile Aç</option>
+      <option>2FA: Authenticator ile Aç</option>
+    </select>
+    <a class="btn">Güncelle</a>
+  </div>
+
+  <!-- THEME -->
+  <div class="panel-card">
+    <div class="panel-title">Tema Ayarları</div>
+    <div class="panel-text">Karanlık veya aydınlık görünüm modunu seç.</div>
+
+    <select>
+      <option>Karanlık Tema (Varsayılan)</option>
+      <option>Aydınlık Tema</option>
+      <option>Otomatik (Cihaz Ayarı)</option>
+    </select>
+
+    <a class="btn">Temayı Uygula</a>
+  </div>
+
+  <!-- SOCIAL LINKS -->
+  <div class="panel-card">
+    <div class="panel-title">Sosyal Medya Bağlantıları</div>
+    <div class="panel-text">Kullanıcı profiline eklemek için sosyal ağlarını düzenle.</div>
+
+    <input type="text" placeholder="Instagram" value="https://instagram.com/omerozcn00">
+    <input type="text" placeholder="GitHub" value="https://github.com/omerozcan">
+    <input type="text" placeholder="LinkedIn" value="https://linkedin.com/in">
+    <a class="btn">Kaydet</a>
+  </div>
+
+</div>
+
+<!-- FOOTER -->
+<footer>
+© 2025 KORVEX — ÖMER FARUK ÖzCAN Tüm Hakları Saklıdır
+<br>
+<a href="https://instagram.com/omerozcn00" target="_blank">
+  <img src="instagram.svg">
+</a>
+</footer>
+
+</body>
+</html>

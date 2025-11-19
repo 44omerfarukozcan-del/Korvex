@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>404 — Sayfa Bulunamadı | KORVEX</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;900&display=swap" rel="stylesheet">
+
+<style>
+*{margin:0;padding:0;box-sizing:border-box;}
+body{
+    background:#0b0d13;
+    color:white;
+    font-family:"Inter",sans-serif;
+    overflow:hidden;
+    height:100vh;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+}
+
+/* Glow */
+.glow{
+    position:absolute;
+    width:500px;height:500px;
+    background:radial-gradient(circle,rgba(59,175,255,.4),rgba(59,175,255,0));
+    filter:blur(80px);
+    z-index:0;
+}
+.glow:nth-child(1){top:-120px;left:-120px;}
+.glow:nth-child(2){bottom:-120px;right:-120px;}
+
+.box{
+    position:relative;
+    z-index:5;
+    padding:30px;
+}
+
+.big-404{
+    font-size:150px;
+    font-weight:900;
+    background:linear-gradient(90deg,#3bafff,#7ec7ff,#ffffff);
+    -webkit-background-clip:text;
+    color:transparent;
+    margin-bottom:10px;
+}
+
+p{
+    opacity:.75;
+    font-size:20px;
+}
+
+.btn{
+    margin-top:30px;
+    padding:14px 34px;
+    background:#3bafff;
+    font-weight:700;
+    color:#0b0d13;
+    border-radius:12px;
+    font-size:18px;
+    text-decoration:none;
+    display:inline-block;
+    transition:.25s;
+}
+.btn:hover{
+    transform:translateY(-4px);
+}
+/* MOBILE MENU */
+.hamburger{
+    display:none;
+    width:34px;
+    cursor:pointer;
+}
+
+.hamburger div{
+    height:4px;
+    background:white;
+    margin:6px 0;
+    border-radius:4px;
+    transition:.3s;
+}
+
+/* MOBILE NAV PANEL */
+.mobile-menu{
+    position:fixed;
+    top:0;
+    right:-100%;
+    width:75%;
+    height:100vh;
+    background:#12141c;
+    padding:40px 30px;
+    z-index:999;
+    transition:.4s;
+    display:flex;
+    flex-direction:column;
+}
+
+.mobile-menu a{
+    color:white;
+    text-decoration:none;
+    font-size:20px;
+    margin:18px 0;
+    opacity:.85;
+    transition:.25s;
+}
+.mobile-menu a:hover{
+    color:#3bafff;
+    opacity:1;
+}
+
+/* DARK OVERLAY */
+.overlay{
+    position:fixed;
+    top:0;left:0;
+    width:100%;height:100%;
+    background:rgba(0,0,0,.55);
+    backdrop-filter:blur(6px);
+    z-index:998;
+    display:none;
+}
+
+/* RESPONSIVE */
+@media(max-width:900px){
+    .nav-links{
+        display:none;
+    }
+    .hamburger{
+        display:block;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<div class="glow"></div>
+<div class="glow"></div>
+
+<div class="box">
+    <div class="big-404">404</div>
+    <p>Aradığın sayfa bulunamadı.<br>KORVEX evreninde böyle bir sayfa yok gibi duruyor.</p>
+
+    <a href="index.html" class="btn">Ana Sayfaya Dön</a>
+</div>
+
+</body>
+</html>

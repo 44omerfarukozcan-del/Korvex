@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>KORVEX — AI Tool</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800;900&display=swap" rel="stylesheet">
+
+<style>
+*{margin:0;padding:0;box-sizing:border-box;}
+body{
+  background:#0b0d13;
+  color:white;
+  font-family:"Inter",sans-serif;
+  overflow-x:hidden;
+}
+
+.glow{
+  position:absolute;
+  width:420px;height:420px;
+  background:radial-gradient(circle,rgba(59,175,255,.35),rgba(59,175,255,0));
+  filter:blur(60px);
+}
+.glow:nth-child(1){top:-120px;left:-120px;}
+.glow:nth-child(2){bottom:-120px;right:-120px;}
+
+.container{
+  width:70%;
+  margin:120px auto;
+  background:#12141c;
+  padding:40px;
+  border-radius:16px;
+  border:1px solid #1c1f29;
+  box-shadow:0 0 30px rgba(59,175,255,.12);
+}
+
+h1{
+  font-size:40px;
+  font-weight:900;
+  background:linear-gradient(90deg,#fff,#9acbff);
+  -webkit-background-clip:text;color:transparent;
+}
+
+textarea{
+  width:100%;
+  height:130px;
+  margin-top:25px;
+  background:#0f1118;
+  color:white;
+  padding:15px;
+  border-radius:12px;
+  border:1px solid #1c1f29;
+}
+
+.btn{
+  margin-top:20px;
+  background:#3bafff;
+  padding:14px 30px;
+  font-size:18px;
+  font-weight:700;
+  border-radius:12px;
+  color:#0b0d13;
+  cursor:pointer;
+  transition:.25s;
+}
+.btn:hover{transform:translateY(-4px);}
+
+.output{
+  margin-top:35px;
+  padding:20px;
+  background:#0f1118;
+  border-radius:12px;
+  border:1px solid #1c1f29;
+  min-height:120px;
+}
+/* MOBILE MENU */
+.hamburger{
+    display:none;
+    width:34px;
+    cursor:pointer;
+}
+
+.hamburger div{
+    height:4px;
+    background:white;
+    margin:6px 0;
+    border-radius:4px;
+    transition:.3s;
+}
+
+/* MOBILE NAV PANEL */
+.mobile-menu{
+    position:fixed;
+    top:0;
+    right:-100%;
+    width:75%;
+    height:100vh;
+    background:#12141c;
+    padding:40px 30px;
+    z-index:999;
+    transition:.4s;
+    display:flex;
+    flex-direction:column;
+}
+
+.mobile-menu a{
+    color:white;
+    text-decoration:none;
+    font-size:20px;
+    margin:18px 0;
+    opacity:.85;
+    transition:.25s;
+}
+.mobile-menu a:hover{
+    color:#3bafff;
+    opacity:1;
+}
+
+/* DARK OVERLAY */
+.overlay{
+    position:fixed;
+    top:0;left:0;
+    width:100%;height:100%;
+    background:rgba(0,0,0,.55);
+    backdrop-filter:blur(6px);
+    z-index:998;
+    display:none;
+}
+
+/* RESPONSIVE */
+@media(max-width:900px){
+    .nav-links{
+        display:none;
+    }
+    .hamburger{
+        display:block;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<div class="glow"></div>
+<div class="glow"></div>
+
+<div class="container">
+  <h1>AI Prompt Çalıştırıcı</h1>
+  <textarea id="prompt" placeholder="Bir şey yaz... Örn: 'Kediler hakkında bir paragraf yaz'"></textarea>
+
+  <button class="btn" onclick="runAI()">Çalıştır</button>
+
+  <div class="output" id="output">AI cevabı burada görünecek...</div>
+</div>
+
+<script>
+function runAI(){
+  let p = document.getElementById("prompt").value;
+
+  if(p.trim() === ""){
+    document.getElementById("output").innerHTML = "Lütfen bir prompt yaz.";
+    return;
+  }
+
+  document.getElementById("output").innerHTML =
+    "<b>Girdi:</b> " + p + "<br><br>" +
+    "<b>AI Çıktısı:</b><br>" +
+    "Bu sadece arayüz demo çıktısıdır. Gerçek model bağlantısı eklenirse tamamen çalışır hale gelir.";
+}
+</script>
+
+</body>
+</html>

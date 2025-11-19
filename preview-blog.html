@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Blog Template — Önizleme | KORVEX</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;900&display=swap" rel="stylesheet">
+
+<style>
+body{margin:0;padding:0;font-family:'Inter',sans-serif;background:#0b0d13;color:white;overflow-x:hidden;}
+.glow{position:absolute;width:450px;height:450px;background:radial-gradient(circle,rgba(59,175,255,.4),transparent);filter:blur(60px);}
+.glow:nth-child(1){top:-120px;left:-120px;}
+.glow:nth-child(2){bottom:-120px;right:-120px;}
+
+/* NAVBAR */
+.navbar{width:100%;padding:22px 50px;display:flex;justify-content:space-between;align-items:center;background:rgba(15,17,26,.8);border-bottom:1px solid rgba(255,255,255,.1);backdrop-filter:blur(12px);}
+.nav-left{display:flex;align-items:center;gap:14px;}
+.logo-img{width:55px;}
+.nav-name{font-size:28px;font-weight:900;}
+.nav-links a{margin-left:35px;color:white;text-decoration:none;opacity:.75;transition:.25s;}
+.nav-links a:hover{color:#3bafff;opacity:1;}
+
+/* HERO */
+.hero{
+    padding:150px 20px 120px;
+    text-align:center;
+}
+.hero h1{
+    font-size:60px;
+    font-weight:900;
+    background:linear-gradient(90deg,#fff,#a9d1ff);
+    -webkit-background-clip:text;
+    color:transparent;
+}
+.hero p{
+    opacity:.75;
+    margin-top:15px;
+    font-size:22px;
+}
+
+/* GRID */
+.grid{
+    width:90%;
+    margin:30px auto;
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(270px,1fr));
+    gap:28px;
+}
+.card{
+    background:#12141c;
+    padding:18px;
+    border-radius:16px;
+    border:1px solid #1c1f29;
+    transition:.25s;
+}
+.card:hover{
+    border-color:#3bafff;
+    transform:translateY(-5px);
+}
+.card img{
+    width:100%;
+    border-radius:12px;
+    margin-bottom:14px;
+}
+.card h3{
+    font-size:22px;
+    margin-bottom:6px;
+}
+.card p{
+    opacity:.75;
+    line-height:1.5;
+}
+.meta{
+    margin-top:10px;
+    font-size:14px;
+    opacity:.55;
+}
+
+/* FOOTER */
+footer{
+    margin-top:70px;
+    padding:35px;
+    text-align:center;
+    background:#10121a;
+    border-top:1px solid rgba(255,255,255,.06);
+}
+footer img{
+    width:28px;
+    margin-top:10px;
+    opacity:.85;
+}
+footer img:hover{opacity:1;}
+</style>
+</head>
+
+<body>
+
+<div class="glow"></div>
+<div class="glow"></div>
+
+<!-- NAVBAR -->
+<div class="navbar">
+  <div class="nav-left">
+    <img src="logo.svg" class="logo-img">
+    <div class="nav-name">KORVEX</div>
+  </div>
+  <div class="nav-links">
+    <a href="sablonlar.html">← Şablonlara Dön</a>
+  </div>
+</div>
+
+<!-- HERO -->
+<div class="hero">
+  <h1>Blog Template</h1>
+  <p>Temiz, okunabilir ve modern blog tasarımı.</p>
+</div>
+
+<!-- BLOG GRID -->
+<div class="grid">
+
+  <div class="card">
+    <img src="https://images.pexels.com/photos/1181671/pexels-photo-1181671.jpeg?auto=compress&cs=tinysrgb&w=800">
+    <h3>Front-End Dünyasına Giriş</h3>
+    <p>HTML, CSS ve JavaScript ile başlayan yolculuğun temel bilgileri.</p>
+    <div class="meta">📅 12 Şubat 2025 — ✍ O. Özcan</div>
+  </div>
+
+  <div class="card">
+    <img src="https://images.pexels.com/photos/574071/pexels-photo-574071.jpeg?auto=compress&cs=tinysrgb&w=800">
+    <h3>Python ile Veri Analizi</h3>
+    <p>Pandas, NumPy ve Matplotlib ile modern veri işleme yöntemleri.</p>
+    <div class="meta">📅 10 Şubat 2025 — ✍ O. Özcan</div>
+  </div>
+
+  <div class="card">
+    <img src="https://images.pexels.com/photos/3861958/pexels-photo-3861958.jpeg?auto=compress&cs=tinysrgb&w=800">
+    <h3>Dijital Tasarım Trendleri</h3>
+    <p>2025'in en güncel UI/UX trendlerini keşfedin.</p>
+    <div class="meta">📅 05 Şubat 2025 — ✍ O. Özcan</div>
+  </div>
+
+</div>
+
+<!-- FOOTER -->
+<footer>
+© 2025 KORVEX — ÖMER FARUK ÖZCAN Tüm Hakları Saklıdır<br>
+<a href="https://instagram.com/omerozcn00" target="_blank"><img src="instagram.svg"></a>
+</footer>
+
+</body>
+</html>

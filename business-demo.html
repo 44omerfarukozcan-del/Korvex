@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<title>Business Demo — KORVEX</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;800;900&display=swap" rel="stylesheet">
+
+<style>
+body{
+  margin:0;
+  background:#0b0d13;
+  color:white;
+  font-family:'Inter',sans-serif;
+}
+
+/* HERO */
+.hero{
+  text-align:center;
+  padding:120px 20px;
+}
+.hero h1{
+  font-size:56px;
+  font-weight:900;
+}
+.hero p{
+  opacity:.8;
+  font-size:20px;
+  margin-top:12px;
+}
+
+/* SECTION TITLE */
+.section-title{
+  text-align:center;
+  font-size:30px;
+  font-weight:800;
+  margin:70px 0 20px;
+}
+
+/* GRID */
+.grid{
+  width:90%;
+  margin:auto;
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+  gap:25px;
+}
+
+/* CARD */
+.card{
+  background:#12141c;
+  padding:24px;
+  border-radius:14px;
+  border:1px solid #1c1f29;
+  transition:.25s;
+}
+.card:hover{
+  transform:translateY(-6px);
+  border-color:#3bafff;
+}
+.card h3{margin-bottom:10px;font-size:20px;}
+.card p{opacity:.75;font-size:15px;}
+
+/* FOOTER */
+footer{
+  text-align:center;
+  padding:40px 0;
+  background:#10121a;
+  margin-top:80px;
+}
+</style>
+</head>
+
+<body>
+
+<div class="hero">
+  <h1>KORVEX Studio</h1>
+  <p>Web Tasarım — Yazılım — Medya Çözümleri</p>
+</div>
+
+<h2 class="section-title">Hizmetler</h2>
+<div class="grid">
+  <div class="card"><h3>Web Tasarım</h3><p>Modern ve hızlı kurumsal web siteleri.</p></div>
+  <div class="card"><h3>Yazılım</h3><p>Özel yazılım çözümleri.</p></div>
+  <div class="card"><h3>Danışmanlık</h3><p>Uzman teknik destek.</p></div>
+</div>
+
+<h2 class="section-title">Ekip</h2>
+<div class="grid">
+  <div class="card"><h3>Ömer</h3><p>Frontend Developer</p></div>
+  <div class="card"><h3>Ali</h3><p>UI/UX Designer</p></div>
+  <div class="card"><h3>Mert</h3><p>Backend Developer</p></div>
+</div>
+
+<h2 class="section-title">Fiyatlandırma</h2>
+<div class="grid">
+  <div class="card"><h3>Basic</h3><p>Landing page + logo</p></div>
+  <div class="card"><h3>Pro</h3><p>Kurumsal site + panel</p></div>
+  <div class="card"><h3>Kurumsal</h3><p>Özel yazılım + destek</p></div>
+</div>
+
+<footer>
+© 2025 Business Demo — KORVEX
+</footer>
+
+</body>
+</html>
